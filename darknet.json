@@ -1,0 +1,9 @@
+{
+  "openlib": {
+    "entryPoints": [
+      "alphanum_to_int",
+      "gemm_bin",
+      "resize_data"
+    ]
+  }
+}
