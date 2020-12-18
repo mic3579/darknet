@@ -18,7 +18,7 @@ jobs:
       run: make -j
 
     - name: Coderrect Scan
-      uses: coderrect-inc/coderrect-github-action@v0.5
+      uses: coderrect-inc/coderrect-github-action@v1.2
       with:
         buildCommand: "make -j"
         options: "-e libdarknet.a -conf=./darknet.json"
