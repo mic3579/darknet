@@ -1,0 +1,23 @@
+name: CI_coderrect
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  Test_build_with_coderrect:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: build
+      run: make -j
+
+    - name: Coderrect Scan
+      uses: coderrect-inc/coderrect-github-action@v1.2
+      with:
+        buildCommand: "make -j"
